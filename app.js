@@ -70,6 +70,20 @@ let pergunta2 = document.getElementById("pergunta2");
 let pergunta3 = document.getElementById("pergunta3");
 let pergunta4 = document.getElementById("pergunta4");
 
+// Teste
+
+function proximo() {
+  // Obtém o valor do campo de texto
+  let textAreaValue = document.getElementById("CAT_Custom_1").value;
+
+  // Verifica se o campo de texto está vazio ou não
+  if (textArea1.trim() === "" || textArea2.trim() === "" || textArea3.trim() === "" || textArea4.trim() === "" ) {
+    // Se estiver vazio, exibe uma mensagem de erro ou faz alguma ação desejada
+    alert("O campo é obrigatório. Por favor, preencha-o.");
+    return; // Interrompe o envio do formulário
+  }
+  // 
+
 // Event listener para o botão "Próximo"
 $(".next").click(function () {
   if (animating) return false;
