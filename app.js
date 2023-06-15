@@ -64,18 +64,20 @@ let animating; // flag para evitar glitches de cliques múltiplos rápidos
 // Event listener para o botão "Próximo"
 $(".next").click(function () {
   // Obtém referências para as perguntas e respostas do formulário
-let textArea1 = document.getElementById("CAT_Custom_1").value;
-let textArea2 = document.getElementById("CAT_Custom_2").value;
-let textArea3 = document.getElementById("CAT_Custom_3").value;
-let textArea4 = document.getElementById("CAT_Custom_4").value;
-let pergunta1 = document.getElementById("pergunta1");
-let pergunta2 = document.getElementById("pergunta2");
-let pergunta3 = document.getElementById("pergunta3");
-let pergunta4 = document.getElementById("pergunta4");
-   if (textArea1.trim() === "" || textArea2.trim() === "" || textArea3.trim() === "" || textArea4.trim() === "" ) {
+  document.getElementById("next").addEventListener("click",function(){
+  let textArea1 = document.getElementById("CAT_Custom_1").value;
+  let textArea2 = document.getElementById("CAT_Custom_2").value;
+  let textArea3 = document.getElementById("CAT_Custom_3").value;
+  let textArea4 = document.getElementById("CAT_Custom_4").value;
+  let pergunta1 = document.getElementById("pergunta1");
+  let pergunta2 = document.getElementById("pergunta2");
+  let pergunta3 = document.getElementById("pergunta3");
+  let pergunta4 = document.getElementById("pergunta4");
+  if (textArea1.trim() === "" || textArea2.trim() === "" || textArea3.trim() === "" || textArea4.trim() === "" ) {
     // Se estiver vazio, exibe uma mensagem de erro ou faz alguma ação desejada
     alert("O campo é obrigatório. Por favor, preencha-o.");
     return; // Interrompe o envio do formulário
+  }
   }
   if (animating) return false;
   animating = true;
