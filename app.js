@@ -60,7 +60,7 @@ let current_fs, next_fs, previous_fs; // fieldsets
 let left, opacity, scale; // propriedades dos fieldsets que serão animadas
 let animating; // flag para evitar glitches de cliques múltiplos rápidos
 
-  // Obtém referências para as perguntas e respostas do formulário
+// Obtém referências para as perguntas e respostas do formulário
 let textArea1 = document.getElementById("CAT_Custom_1").value;
 let textArea2 = document.getElementById("CAT_Custom_2").value;
 let textArea3 = document.getElementById("CAT_Custom_3").value;
@@ -68,12 +68,10 @@ let textArea4 = document.getElementById("CAT_Custom_4").value;
 let pergunta1 = document.getElementById("pergunta1");
 let pergunta2 = document.getElementById("pergunta2");
 let pergunta3 = document.getElementById("pergunta3");
-let pergunta4 = document.getElementById("pergunta4")
-
+let pergunta4 = document.getElementById("pergunta4");
 
 // Event listener para o botão "Próximo"
 $(".next").click(function () {
-;
   if (animating) return false;
   animating = true;
 
@@ -155,12 +153,12 @@ $(".previous").click(function () {
   );
 });
 
-// function confirmar() {}
+function confirmar() {}
 
-// // Impede o envio do formulário ao clicar no botão "Enviar"
-// $(".submit").click(function () {
-//   return false;
-// });
+// Impede o envio do formulário ao clicar no botão "Enviar"
+$(".submit").click(function () {
+  return false;
+});
 
 // Terceira Parte - Agradecimento
 function btnFinalizar() {
