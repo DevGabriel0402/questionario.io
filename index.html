@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadados -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Ícone da página -->
+    <link rel="icon" href="logo .png" />
+
+    <!-- Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="https://apis.google.com/js/api.js?onload=handleClientLoad"></script>
+
+    <script src="app.js" defer></script>
+
+    <title>Questionário</title>
+  </head>
+  <body id="corpo">
+    <!-- Primeira parte do conteúdo -->
+    <div id="primeiraParte">
+      <div class="info primeiraParte">
+        <!-- Logo -->
+        <img src="logo .png" alt="PBH" class="logoInicial" id="logoInicial" />
+        <!-- Botão para começar -->
+        <a id="comecar" onclick="entrar()">Começar</a>
+      </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <div class="header" id="header">
+      <img src="logo .png" alt="" class="logo" id="logo" />
+    </div>
+
+    <!-- Mensagem Caret Browsing -->
+    <div id="mensagemCaretBrowsing">
+      <p>Para desativar o Caret Browsing, pressione a tecla F7.</p>
+    </div>
+
+    <!-- Multi-step form -->
+    <div class="msform">
+      <form class="questionnaire-form" id="msform">
+        <!-- Barra de progresso -->
+        <ul id="progressbar">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+
+        <!-- Conjunto de campos -->
+        <fieldset>
+          <h2 class="fs-title">Pergunta 1</h2>
+          <h3 class="fs-subtitle" id="pergunta1">
+            O que você entende que é uma comunicação saudável?
+          </h3>
+          <!-- Caixa de texto -->
+          <textarea
+            class="form-control"
+            name="data[question1]"
+            id="CAT_Custom_1"
+            rows="8"
+            placeholder="insira sua resposta aqui..."
+          ></textarea>
+          <!-- Botão para ir para a próxima pergunta -->
+          <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Proximo"
+          />
+        </fieldset>
+
+        <!-- Conjunto de campos -->
+        <fieldset>
+          <h2 class="fs-title">Pergunta 2</h2>
+          <h3 class="fs-subtitle" id="pergunta2">
+            Como você acha que poderia ser resolvido a falta de comunicação na
+            escola?
+          </h3>
+          <!-- Caixa de texto -->
+          <textarea
+            class="form-control"
+            name="data[question2]"
+            id="CAT_Custom_2"
+            rows="8"
+            placeholder="insira sua resposta aqui..."
+            onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);"
+          ></textarea>
+          <!-- Botão para voltar para a pergunta anterior -->
+          <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Anterior"
+          />
+          <!-- Botão para ir para a próxima pergunta -->
+          <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Proximo"
+          />
+        </fieldset>
+
+        <!-- Conjunto de campos -->
+        <fieldset>
+          <h2 class="fs-title">Pergunta 3</h2>
+          <h3 class="fs-subtitle" id="pergunta3">O que pode ser feito?</h3>
+          <!-- Caixa de texto -->
+          <textarea
+            class="form-control"
+            name="data[question3]"
+            id="CAT_Custom_3"
+            rows="8"
+            placeholder="insira sua resposta aqui..."
+            onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);"
+          ></textarea>
+          <!-- Botão para voltar para a pergunta anterior -->
+          <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Anterior"
+          />
+          <!-- Botão para ir para a próxima pergunta -->
+          <input
+            type="button"
+            name="next"
+            class="next action-button"
+            value="Proximo"
+          />
+        </fieldset>
+
+        <!-- Conjunto de campos -->
+        <fieldset>
+          <h2 class="fs-title">Pergunta 4</h2>
+          <h3 class="fs-subtitle" id="pergunta4">O que pode ser utilizado?</h3>
+          <!-- Caixa de texto -->
+          <textarea
+            class="form-control"
+            name="data[question4]"
+            id="CAT_Custom_4"
+            rows="8"
+            placeholder="insira sua resposta aqui..."
+            onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);"
+          ></textarea>
+          <!-- Botão para voltar para a pergunta anterior -->
+          <input
+            type="button"
+            name="previous"
+            class="previous action-button"
+            value="Anterior"
+          />
+          <!-- Botão para finalizar o questionário -->
+          <a
+            id="finalizar"
+            name="next"
+            class="next"
+            value="Finalizar"
+            onclick="btnFinalizar()"
+            >Finalizar</a
+          >
+        </fieldset>
+      </form>
+    </div>
+
+    <!-- Informações finais -->
+    <div id="info" class="finalizacao">
+      <h1 id="title" class="title">Agradecemos pelo feedback!</h1>
+    </div>
+  </body>
+</html>
