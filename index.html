@@ -32,23 +32,28 @@
   </head>
   <body id="corpo">
     <!-- Primeira parte do conteúdo -->
-    <div id="primeiraParte">
-      <div class="info primeiraParte">
-        <!-- Logo -->
-        <img src="logo .png" alt="PBH" class="logoInicial" id="logoInicial" />
-        <!-- Botão para começar -->
-        <a id="comecar" onclick="entrar()">Começar</a>
+    <div id="inicializar">
+      <div id="primeiraParte">
+        <div class="info primeiraParte">
+          <!-- Logo -->
+          <img src="logo .png" alt="PBH" class="logoInicial" id="logoInicial" />
+          <!-- Botão para começar -->
+          <a id="comecar" onclick="entrar()">Começar</a>
+        </div>
       </div>
-    </div>
-
-    <!-- Cabeçalho -->
-    <div class="header" id="header">
-      <img src="logo .png" alt="" class="logo" id="logo" />
+      <div class="load" id="load">
+        <div class="ring-1" id="loading"></div>
+      </div>
     </div>
 
     <!-- Mensagem Caret Browsing -->
     <div id="mensagemCaretBrowsing">
       <p>Para desativar o Caret Browsing, pressione a tecla F7.</p>
+    </div>
+
+    <!-- Cabeçalho -->
+    <div class="header" id="header">
+      <img src="logo .png" alt="" class="logo" id="logo" />
     </div>
 
     <!-- Multi-step form -->
