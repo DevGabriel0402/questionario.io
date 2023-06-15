@@ -1,6 +1,10 @@
 // Obtém referências para os elementos do DOM
 const logoComecar = document.getElementById("logoInicial");
 const botao = document.getElementById("comecar");
+const loading = document.getElementById("loading");
+const load = document.getElementById("load");
+load.style.display = "none";
+loading.style.display = "none";
 
 // Define a posição inicial da logo
 logoComecar.style.transform = "translateY(0)";
@@ -38,7 +42,17 @@ info.style.display = "none";
 function entrar() {
   const inicio = document.getElementById("primeiraParte");
   const body = document.getElementById("corpo");
+
   inicio.style.display = "none";
+  load.style.display = "block";
+  loading.style.display = "block";
+
+  setTimeout(() => {
+    load.style.display = "none";
+    loading.style.display = "none";
+  }, 1500);
+
+  body.style.display = "flex";
   header.style.display = "block";
   formulario.style.display = "block";
   body.style.background = "#fff";
