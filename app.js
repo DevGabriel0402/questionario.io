@@ -158,12 +158,12 @@ $(".previous").click(function () {
   );
 });
 
-function confirmar() {}
+// function confirmar() {}
 
-// Impede o envio do formulário ao clicar no botão "Enviar"
-$(".submit").click(function () {
-  return false;
-});
+// // Impede o envio do formulário ao clicar no botão "Enviar"
+// $(".submit").click(function () {
+//   return false;
+// });
 
 // Terceira Parte - Agradecimento
 function btnFinalizar() {
